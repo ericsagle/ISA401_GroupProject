@@ -17,4 +17,10 @@ tail(step2_wc_possesion)
 step3_wc_possesion = html_table(step2_wc_possesion, header = T)[[1]]
 step3_wc_possesion
 
+colnames(step3_wc_possesion)=step3_wc_possesion[c(1),]
+step3_wc_possesion=step3_wc_possesion[-c(1),]
+
+step3_wc_possesion <- step3_wc_possesion %>% 
+  mutate(Squad = str_replace(Squad, "^\\S* ", ""))
+
 write_csv(step3_wc_possesion, 'Possesion.csv')
