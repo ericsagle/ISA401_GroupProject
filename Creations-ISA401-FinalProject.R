@@ -17,4 +17,8 @@ tail(step2_wc_c)
 step3_wc_c  = html_table(step2_wc_c,  header = T)[[1]]
 step3_wc_c 
 
+creations_final <- step3_wc_c[ -c(5:11) ]
+creations_final <- creations_final[ -c(6:12) ]
+possesion_final
+
 write_csv(step3_wc_c,'Creations.csv')
