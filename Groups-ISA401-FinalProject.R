@@ -115,8 +115,8 @@ wc_groups_tbl =
     step3_wc_groups_A, step3_wc_groups_B, step3_wc_groups_C,step3_wc_groups_D, step3_wc_groups_E, step3_wc_groups_F, step3_wc_groups_G, step3_wc_groups_H
   ) %>% relocate(Group)
 
-groups_final <- wc_groups_tbl[ -c(12:17) ]
+groups_final <- wc_groups_tbl[ -c(12:16) ]
 groups_final
 
-write_csv(groups_final, 'Groups.csv')
+write_csv(wc_groups_tbl, 'Groups.csv')
 
