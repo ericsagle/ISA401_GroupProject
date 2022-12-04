@@ -20,9 +20,6 @@ step3_wc_possesion
 colnames(step3_wc_possesion)=step3_wc_possesion[c(1),]
 step3_wc_possesion=step3_wc_possesion[-c(1),]
 
-step3_wc_possesion <- step3_wc_possesion %>% 
-  mutate(Squad = str_replace(Squad, "^\\S* ", ""))
-
 possesion_final <- step3_wc_possesion[ -c(6:18) ]
 possesion_final <- possesion_final[ -c(4) ]
 possesion_final
